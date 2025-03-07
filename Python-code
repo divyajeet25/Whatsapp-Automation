@@ -1,0 +1,12 @@
+import pywhatkit as kit
+import time
+
+def repeat_message(number, message, repeat_count, wait_time=1):
+    for i in range(repeat_count):
+        print(f"Sending message {i+1} to {number}... 💖")
+        kit.sendwhatmsg_instantly(number, message, wait_time)
+        time.sleep(wait_time)  # Small delay to avoid detection
+    print("✅ All messages sent successfully!")
+
+# Example Usage
+repeat_message("+91xxxxxxxxxx", "Hey babe! 😘 This is message repeat test!", 5, 4)
